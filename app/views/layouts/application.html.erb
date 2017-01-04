@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html;. 
+charset=iso-8859-1" /> 
+<meta http-equiv="Content-Language" content="en-us" /> 
+<title>Library Info System</title> 
+<style type="text/css">
+
+body { 
+ font-family: Helvetica, Geneva, Arial, sans-serif; 
+font-size: small; 
+ font-color: #000; 
+ background-color: #fff; 
+} 
+a:link, a:active, a:visited { 
+ color: #CD0000; 
+} 
+input {  
+ margin-bottom: 5px; 
+} 
+p {  
+ line-height: 150%; 
+} 
+div#container { 
+ width: 760px; 
+ margin: 0 auto; 
+} 
+div#header { 
+ text-align: center; 
+ padding-bottom: 15px; 
+} 
+div#content { 
+ float: left; 
+ width: 450px; 
+ padding: 10px; 
+} 
+div#content h3 { 
+ margin-top: 15px; 
+} 
+ul#books { 
+ list-style-type: none; 
+} 
+ul#books li { 
+ line-height: 140%; 
+} 
+div#sidebar {
+width: 200px; 
+ margin-left: 480px; 
+} 
+ul#subjects { 
+ width: 700px; 
+ text-align: center; 
+ padding: 5px; 
+ background-color: #ececec; 
+ border: 1px solid #ccc; 
+ margin-bottom: 20px; 
+} 
+ul#subjects li { 
+ display: inline; 
+ padding-left: 5px; 
+}
+
+</style> 
+</head> 
+<body id="library"> 
+<div id="container"> 
+<div id="header"> 
+<h1>Library Info System</h1> 
+<h3>Library powered by Ruby on Rails</h3> 
+</div> 
+<div id="content"> 
+<%= yield -%> 
+</div> 
+<div id="sidebar"></div> 
+</div> 
+</body> 
+</html> 

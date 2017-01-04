@@ -1,0 +1,20 @@
+<ul id="subjects">
+<% Subject.all().each() do |t|%>
+<li><%= link_to t.name ,:action =>"show_subjects", :id=>t.id %></li>
+<%end%>
+</ul>
+
+<%if Book.all().blank? %>
+<p>NO BOOKS IN SYSTEM</p>
+<%else%>
+<p>BOOKS IN SYS:</p>
+<ul id="books">
+<% Book.all().each() do |c|%>
+<li><%= link_to c.title,{:action =>'show',:id =>c.id} %>
+<b><%= link_to 'edit',{:action =>'edit',:id =>c.id} %></b>
+<b><%= link_to 'delete' ,{:action=>'delete',:id=>c.id()}%></b></li>
+<%end%>
+</ul>
+<%end%>
+<p><%= link_to "Add another book" , {:action =>'new'} %></p>
+
